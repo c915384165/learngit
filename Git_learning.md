@@ -11,7 +11,7 @@ git是什么？
 
 > Linus--Linux之父在2002年用一周时间编写。
 
-## Git入门
+# Git入门
 
 ### 安装
 
@@ -24,10 +24,10 @@ brew install
 ```
 #### Win
 
-略
+> 略
 
 
-## Git 本地仓库
+# Git 本地仓库
 
 ### 创建版本库 init/add/commit
 
@@ -117,10 +117,42 @@ git rm
 
 缓冲区/工作区的概念
 
-## Git 远程仓库
+# Git 远程仓库
 
-### 添加远程库
+## Github入门
+
+### ssh-keygen
+
+```sh
+ssh-keygen -t rsa -C "<your email address>"
+cd ~/.ssh
+subl id_rsa.pub
+```
+
+> github也支持别的协议，如https。当ssh不能用时候可以用https。
+
+将生成的公钥复制后添加到Github中。（具体操作略）
+
+
+### 从本地推送
+
+#### 网页新建远程库（Create a new repo）
+
+#### 关联一个远程库
+
+```sh
+git remote add origin git@github.com:c91384165/learngit.git
+
+```
+
+#### 推送
+
+```sh
+git push -u origin master # 第一次用 -u 参数
+```
 
 ### 从远程库克隆
 
-
+```sh
+git clone git@github.com:c915384165/learngit.git
+```
