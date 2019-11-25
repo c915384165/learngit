@@ -151,6 +151,13 @@ git remote add origin git@github.com:c91384165/learngit.git
 git push -u origin master # 第一次用 -u 参数
 ```
 
+如果想把当前文件夹所有的都推出去
+
+```sh
+git push . origin master
+```
+
+
 ### 从远程库克隆
 
 ```sh
