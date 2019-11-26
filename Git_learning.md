@@ -187,6 +187,31 @@ git clone git@github.com:c915384165/learngit.git
 
 ## 03 分支
 
+### About branch
+
+* What is branch?
+* Why we use branch?
+* How we use branch?
+* When & where we use branch?
+
+#### what
+
+仅为个人见解如下：
+条条大路通罗马。
+branch就像一条路。可能是大路，也可能是小路。
+当路不好走，我们就要修路。
+但为了保证交通正常，必须有其他的路可走。
+这样修路时，别的路也能走，不影响交通。
+修好的路可能是高速路，八车道。
+以后就用新路走。
+但是如果路修坏了，挖到坑了，或者挖不通。
+原来的路还能用。
+我们还有时间想别的办法。
+
+#### why
+
+当几个人共同开发一个软件的时候。为了提高效率，同时避免出错。
+
 ### 创建分支
 
 ```sh
@@ -203,6 +228,7 @@ checkout也可以切换/创建分支，但是容易弄混，这个新命令更�
 
 ```sh
 git merge <branch name> # 将<name>融入当前分支。
+git merge --no-ff -m "<message>" <branch name>
 ```
 融合分支有时会遇到冲突。比如两个文件都提交过修改，但是改的内容不同。可以通过修改文件的方式保证融合。
 
@@ -211,4 +237,10 @@ git merge <branch name> # 将<name>融入当前分支。
 ```sh
 git branch -d <branch name> # 删除分支
 
+```
+
+### 查看分支
+
+```sh
+git log --graph --pretty=oneline
 ```
