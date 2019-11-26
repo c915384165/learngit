@@ -244,3 +244,24 @@ git branch -d <branch name> # 删除分支
 ```sh
 git log --graph --pretty=oneline
 ```
+
+### stash(藏匿)
+
+#### git stash
+
+stash“储藏”当前工作现场，等以后恢复继续工作。
+
+```sh
+git stash list # 列表
+git stash apply stash@{0} # 恢复
+git stash drop # 删除
+git stash pop # 恢复并删除
+```
+
+#### git cherry-pick （摘樱桃）
+
+需要载入其他修改时候，使用这个。
+
+```sh
+git cherry-pick <commit id>
+```
