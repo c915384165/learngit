@@ -1,17 +1,12 @@
-# Git
+# Git版本控制
+
+## 简介
+
+### git是什么？
 
 
-git是什么？
-
-
-> 世界最好的（没有之一）分布式版本控制系统。
-
-
-## git的前世今生
-
-> Linus--Linux之父在2002年用一周时间编写。
-
-# Git入门
+世界最好的（没有之一）分布式版本控制系统。
+Linus--Linux之父在2002年用一周时间编写。
 
 ### 安装
 
@@ -26,25 +21,46 @@ brew install
 
 > 略
 
+### 基本设置
 
-# Git 本地仓库
+```sh
+git config --global user.name "<user name>"
+git config --global user.email <email for github>
+```
 
-### 创建版本库 init/add/commit
+## Git 本地仓库
+
+### 创建版本库 
 
 ```sh
 cd <folder> # 新建文件夹
 git init # 创建版本库（生成.git文件夹）
-git add <file> （添加文件）
-git commit -m <message>  （提交文件）
-git status （当前状态）
-git log （日志文件）
-git diff （查找改动）
+```
+
+### 添加文件
+
+```sh
+git add <file> #（添加文件）
+```
+
+
+### 提交文件
+
+```sh
+git commit -m <message>  #（提交文件）
+```
+
+### 查看
+
+```sh
+git status #（当前状态）
+git log #（日志文件）
+git diff #（查找改动）
 ```
 
 > 注意：git只支持文本格式的文件；
 > 文本编码用utf-8
 
-### 查看状态 status / log / reflog / diff
 
 ### Git 回到未来（版本切换） reset
 
@@ -96,7 +112,8 @@ git rm
 ```
 
 
-> 小结：增删改查
+
+### 小结：增删改查
 
 * 创建版本库（.git）init
 * 删除
@@ -117,19 +134,23 @@ git rm
 
 缓冲区/工作区的概念
 
-# Git 远程仓库
+## 02 Git 远程仓库
 
-## Github入门
-
-### ssh-keygen
+### SSH 协议
+在使用github远程库前，需要了解协议。
+github支持多种传输协议，包括ssh和https等。
+这里介绍下ssh协议。
+使用ssh协议前首先生成密钥。
+生成密钥的命令，打开终端使用ssh-keygen命令。
+#### ssh-keygen
 
 ```sh
 ssh-keygen -t rsa -C "<your email address>"
 cd ~/.ssh
 subl id_rsa.pub
 ```
+github设置有ssh相关选项，将生成的公钥复制后提交即可使用。
 
-> github也支持别的协议，如https。当ssh不能用时候可以用https。
 
 将生成的公钥复制后添加到Github中。（具体操作略）
 
@@ -162,4 +183,32 @@ git push . origin master
 
 ```sh
 git clone git@github.com:c915384165/learngit.git
+```
+
+## 03 分支
+
+### 创建分支
+
+```sh
+git branch <branch name> # 创建分支
+git switch -c <branch name> # 创建并切换分支
+git branch # 查看分支
+```
+### 切换分支
+```sh
+git switch <branch name>
+```
+checkout也可以切换/创建分支，但是容易弄混，这个新命令更好用。
+### 合并分支
+
+```sh
+git merge <branch name> # 将<name>融入当前分支。
+```
+融合分支有时会遇到冲突。比如两个文件都提交过修改，但是改的内容不同。可以通过修改文件的方式保证融合。
+
+### 删除分支
+
+```sh
+git branch -d <branch name> # 删除分支
+
 ```
