@@ -252,6 +252,7 @@ git log --graph --pretty=oneline
 stash“储藏”当前工作现场，等以后恢复继续工作。
 
 ```sh
+git stash # 添加一个 stash
 git stash list # 列表
 git stash apply stash@{0} # 恢复
 git stash drop # 删除
