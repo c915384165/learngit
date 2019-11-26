@@ -185,6 +185,19 @@ git push . origin master
 git clone git@github.com:c915384165/learngit.git
 ```
 
+### 从远程库合并
+
+```sh
+git pull
+```
+
+### 远程分支与本地分支建立关联
+
+当提示`no tracking information`时候。
+
+```sh
+git branch --set-upstream-to <branch-name> origin/<branch-name>
+```
 ## 03 分支
 
 ### About branch
