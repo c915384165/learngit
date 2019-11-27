@@ -1,6 +1,6 @@
-# GIT作弊表
+# GIT CHEAT SHEET GIT作弊表
 
-## 创建
+## CREATE 创建
 
 Clone an existing repository<br>
 复制一个存在的仓库
@@ -17,7 +17,7 @@ Create a new local repository<br>
 $ git init
 ```
 
-## 本地库修改
+## LOCAL CHANGES 本地库修改
 
 Changed files in your working directory<br>
 查看工作目录下文件的修改状态
