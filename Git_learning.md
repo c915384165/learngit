@@ -2,26 +2,16 @@
 
 ## 简介
 
-### git是什么？
+git是什么？
 
+> 分布式版本控制系统
 
-世界最好的（没有之一）分布式版本控制系统。
-Linus--Linux之父在2002年用一周时间编写。
+如何安装?
 
-### 安装
+> 下载地址：[git Download](https://git-scm.com/downloads)
+> 步骤略
 
-[git Download](https://git-scm.com/downloads)
-
-#### Mac
-
-```sh
-brew install
-```
-#### Win
-
-> 略
-
-### 基本设置
+设置用户名和邮箱
 
 ```sh
 git config --global user.name "<user name>"
@@ -30,7 +20,7 @@ git config --global user.email <email for github>
 
 ## Git 本地仓库
 
-### 创建版本库 
+创建版本库 
 
 ```sh
 cd <folder> # 新建文件夹
