@@ -7,7 +7,16 @@ Clone an existing repository<br>
 
 ```sh
 $ git clone ssh://user@domain.com/repo.git
+$ git clone git@github.com:c915384165/learngit.git
 
+```
+
+使用ssh协议生成密钥
+
+```sh
+ssh-keygen -t rsa -C "<your email address>"
+cd ~/.ssh
+subl id_rsa.pub
 ```
 
 Create a new local repository<br>
@@ -15,6 +24,13 @@ Create a new local repository<br>
 
 ```sh
 $ git init
+```
+
+设置用户名和邮箱
+
+```sh
+$ git config --global user.name "<user name>"
+$ git config --global user.email <email for github>
 ```
 
 ## LOCAL CHANGES 本地库修改
@@ -85,6 +101,22 @@ Change the last commit<br>
 $ git commit --amend
 ```
 
+stash“储藏”当前工作现场，等以后恢复继续工作。
+
+```sh
+$ git stash # 添加一个 stash
+$ git stash list # 列表
+$ git stash apply stash@{0} # 恢复
+$ git stash drop # 删除
+$ git stash pop # 恢复并删除
+```
+
+载入指定修改时候，使用这个。
+
+```sh
+$ git cherry-pick <commit id>
+```
+
 ## COMMIT HISTORY 提交历史
 
 Show all commits, starting with newest<br>
@@ -139,6 +171,7 @@ List all existing branches<br>
 
 ```sh
 $ git branch -av
+$ git branch --set-upstream-to <branch-name> origin/<branch-name> # 远程分支与本地分支建立关联
 ```
 
 Switch HEAD branch<br>
@@ -198,6 +231,7 @@ Add new remote repository, named <remote><br>
 
 ```sh
 $ git remote add <shortname> <url>
+$ git remote add origin git@github.com:c91384165/learngit.git
 ```
 
 Download all changes from <remote>, but don't integrate into HEAD<br>
@@ -219,6 +253,8 @@ Publish local changes on a remote<br>
 
 ```sh
 $ git push <remote> <branch>
+$ git push -u origin master # 第一次用 -u 参数
+$ git push . origin master
 ```
 
 Delete a branch on the remote<br>
@@ -242,6 +278,7 @@ Merge <branch> into your current HEAD<br>
 
 ```sh
 $ git merge <branch>
+$ git merge --no-ff -m "<message>" <branch name>
 ```
 
 Rebase your current HEAD onto <branch><br>
@@ -299,6 +336,9 @@ Discard all local changes in your working directory （discard = 丢弃）<br>
 
 ```sh
 $ git reset --hard HEAD
+$ git reset --hard HEAD^ # 返回上个版本，如果上两个^^, 
+$ git reset --hard HEAD~100 # 返回上100个版本
+$ git reset --hard <commit id> # 写前几位即可，不要少于3位
 ```
 
 Discard local changes in a specific file<br>
