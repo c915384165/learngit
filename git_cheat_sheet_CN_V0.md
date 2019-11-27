@@ -202,6 +202,7 @@ Delete a local branch<br>
 $ git branch -d <branch>
 $ git branch -D <branch> # 强制删除
 ```
+## Tags
 
 Mark the current commit with a tag<br>
 当前提交添加标签
@@ -209,6 +210,39 @@ Mark the current commit with a tag<br>
 ```sh
 $ git tag <tag-name>
 ```
+
+指定commit(id)添加标签, 补签
+
+```sh
+$ git tag <tag-name> <commit-id>
+$ git tag -a <tagname> -m "<msg>" <commit>
+```
+
+查看标签
+
+```sh
+$ git tag 
+```
+
+查看更改
+
+```sh
+$ git show <tagname>
+```
+
+推送标签
+
+```sh
+$ git push origin <tagname>
+$ git push origin --tags
+```
+
+远程删除
+
+```sh
+$ git push origin :refs/tags/<tagname>
+```
+
 
 ## UPDATE & PUBLISH 更新和发布
 
