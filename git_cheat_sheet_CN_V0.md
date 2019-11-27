@@ -12,7 +12,7 @@ $ git clone ssh://user@domain.com/repo.git
 创建一个新的本地仓库
 
 ```sh
-# git init
+$ git init
 ```
 
 ## 本地库修改
@@ -41,6 +41,7 @@ git commit -m "<message>"  #（提交文件）
 ```
 
 > \\-m: add commit messege
+
 添加所有更改到提交序列
 
 ```sh
