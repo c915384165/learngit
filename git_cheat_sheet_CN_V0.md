@@ -330,7 +330,7 @@ $ git reset --keep <commit>
 ## HELP & DOCUMENTATION 帮助和文档
 
 Get help on the command line
-# 得到命令的帮助
+得到命令的帮助
 
 ```sh
 $ git help <command>
