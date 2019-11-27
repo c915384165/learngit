@@ -20,7 +20,7 @@ $ git init
 查看工作目录下文件的修改状态
 
 ```sh
-git status
+$ git status
 ```
 
 查看文件的修改情况
@@ -32,7 +32,7 @@ $ git diff
 添加文件
 
 ```sh
-git add <file> #（添加文件）
+$ git add <file> #（添加文件）
 ```
 提交文件
 
@@ -40,7 +40,7 @@ git add <file> #（添加文件）
 git commit -m "<message>"  #（提交文件）
 ```
 
-> \\-m: add commit messege
+> \-m: add commit messege
 
 添加所有更改到提交序列
 
