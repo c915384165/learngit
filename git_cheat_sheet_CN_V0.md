@@ -7,30 +7,28 @@ Clone an existing repository<br>
 
 ```sh
 $ git clone ssh://user@domain.com/repo.git
-$ git clone git@github.com:c915384165/learngit.git
-
 ```
 
 使用ssh协议生成密钥
 
 ```sh
-ssh-keygen -t rsa -C "<your email address>"
-cd ~/.ssh
-subl id_rsa.pub
+ssh-keygen -t rsa -C "<your email address>" # 生成密钥
+cd ~/.ssh # 默认的ssh文件夹
+subl id_rsa.pub # 用sublimetext 打开 公钥
 ```
 
 Create a new local repository<br>
 创建一个新的本地仓库
 
 ```sh
-$ git init
+$ git init # 创建本地库 在当前文件夹
 ```
 
 设置用户名和邮箱
 
 ```sh
-$ git config --global user.name "<user name>"
-$ git config --global user.email <email for github>
+$ git config --global user.name "<user name>" # 全局的 git 用户名
+$ git config --global user.email <email for github> # 全局的 git email 
 ```
 
 ## LOCAL CHANGES 本地库修改
@@ -39,18 +37,18 @@ Changed files in your working directory<br>
 查看工作目录下文件的修改状态
 
 ```sh
-$ git status
+$ git status # 文件的状态
 ```
 
 Changes to tracked files<br>
-查看文件的修改情况
+查看文件内容的修改情况
 
 ```sh
 $ git diff
 ```
 
 Add all current changes to the next commit<br>
-添加文件
+添加文件(至缓存区)
 
 ```sh
 $ git add <file> #（添加文件）
